@@ -17,14 +17,14 @@ export class AuthService {
   })
 
   loginUser(username: string, password: string): Observable<any> {
-    const url_api = 'http://localhost:8000/api/v1/login/'
+    const url_api = 'http://3.12.196.116/api/v1/login/'
     return this.http
       .post<UserInterface>(url_api, { username: username, password: password, headers: this.headers })
       .pipe(map(data => data))
   }
 
   registerUser(username: string, password: string, email: string): Observable<any> {
-    const url_api = 'http://localhost:8000/api/v1/registration/'
+    const url_api = 'http://3.12.196.116/api/v1/registration/'
     return this.http
       .post<UserInterface>(url_api, 
         { username: username, email: email, password1: password, password2: password, headers: this.headers })

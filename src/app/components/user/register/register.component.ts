@@ -11,7 +11,7 @@ import { UserInterface } from 'src/app/models/user-interface';
 })
 export class RegisterComponent implements OnInit {
 
-  private user: UserInterface = {
+  public user: UserInterface = {
     username: '',
     password: '',
     email: ''

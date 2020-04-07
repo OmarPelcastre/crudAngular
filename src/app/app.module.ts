@@ -13,6 +13,9 @@ import {HttpClientModule} from '@angular/common/http';
 
 import {DataApiService} from './services/data-api.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NoPasaralLoginService } from './services/no-pasaral-login.service';
+import { AuthService } from './services/auth.service';
+import { NoPasaralDashboardService } from './services/no-pasaral-dashboard.service';
 
 
 @NgModule({
@@ -28,7 +31,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [DataApiService],
+  providers: [
+    AuthService, 
+    DataApiService, 
+    NoPasaralDashboardService, 
+    NoPasaralLoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
