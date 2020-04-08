@@ -15,7 +15,8 @@ export class DataApiService {
   }
   Tests: Observable<any>;
   Test: Observable<any>;
-  url: string = 'http://3.12.196.116';
+  // url: string = 'http://3.12.196.116';
+  url: string = "http://apidjango.ddns.net";
 
   public token;
 
